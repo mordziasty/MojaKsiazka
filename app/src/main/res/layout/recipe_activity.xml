@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:id="@+id/nazwa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Nazwa:"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/title"
+        android:text="Tytuł"
+
+        />
+
+
+    <TextView
+        android:id="@+id/opis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Opis:"
+        android:layout_below="@+id/nazwa"
+        android:layout_alignRight="@+id/skladniki"
+        android:layout_alignEnd="@+id/skladniki" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/introduction"
+        android:text="Opis"
+        android:layout_toEndOf="@+id/title"
+        android:layout_above="@+id/skladniki"
+        android:layout_alignLeft="@+id/title"
+        android:layout_alignStart="@+id/title" />
+
+    <TextView
+        android:id="@+id/skladniki"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Składniki:"
+        android:layout_below="@+id/opis"
+        android:layout_alignRight="@+id/kroki"
+        android:layout_alignEnd="@+id/kroki"
+        android:layout_marginTop="44dp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ingredients"
+        android:text="skladniki"
+        android:layout_alignBottom="@+id/skladniki"
+        android:layout_alignLeft="@+id/title"
+        android:layout_alignStart="@+id/title" />
+
+
+    <TextView
+        android:id="@+id/kroki"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Kroki:"
+        android:layout_above="@+id/porcje"
+        android:layout_alignRight="@+id/porcje"
+        android:layout_alignEnd="@+id/porcje"
+        android:layout_marginBottom="71dp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/steps"
+        android:text="kroki"
+        android:layout_toEndOf="@+id/introduction"
+        android:layout_alignBottom="@+id/kroki"
+        android:layout_alignLeft="@+id/ingredients"
+        android:layout_alignStart="@+id/ingredients" />
+
+    <TextView
+        android:id="@+id/porcje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Porcje:"
+        android:layout_above="@+id/czasgot"
+        android:layout_alignRight="@+id/PreparationMinutes"
+        android:layout_alignEnd="@+id/PreparationMinutes"
+        android:layout_marginBottom="77dp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/servings"
+        android:text="Porcje"
+        android:layout_toEndOf="@+id/steps"
+        android:layout_alignBottom="@+id/porcje"
+        android:layout_alignLeft="@+id/steps"
+        android:layout_alignStart="@+id/steps" />
+
+    <TextView
+        android:id="@+id/czasgot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Czas gotowania:"
+        android:layout_toEndOf="@+id/ingredients"
+        android:layout_above="@+id/czasprzyg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="83dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CookingMinutes"
+        android:text="Czas Gotowania"
+        android:layout_alignBottom="@+id/czasgot"
+        android:layout_alignLeft="@+id/servings"
+        android:layout_alignStart="@+id/servings" />
+
+
+    <TextView
+        android:id="@+id/czasprzyg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Czas przygotowania:"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PreparationMinutes"
+        android:text="Czas Przygotowywania"
+        android:layout_toEndOf="@+id/servings"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/CookingMinutes"
+        android:layout_alignStart="@+id/CookingMinutes" />
+</RelativeLayout>
