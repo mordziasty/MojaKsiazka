@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/tlo"
+        >
 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
 
 
     <TextView
@@ -11,16 +19,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:text="Nazwa:"/>
+        android:text="Nazwa:"
+        android:textColor="#000"
+        android:textStyle="bold"
+
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:id="@+id/title"
         android:text="Tytuł"
-
-        />
+        android:layout_marginBottom="10dp"
+        android:textColor="#000"/>
 
 
     <TextView
@@ -29,10 +40,8 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:text="Opis:"
-        android:layout_below="@+id/nazwa"
-        android:layout_alignRight="@+id/skladniki"
-        android:layout_alignEnd="@+id/skladniki" />
-
+        android:textColor="#000"
+        android:textStyle="bold"/>
 
 
     <TextView
@@ -40,10 +49,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/introduction"
         android:text="Opis"
-        android:layout_toEndOf="@+id/title"
-        android:layout_above="@+id/skladniki"
-        android:layout_alignLeft="@+id/title"
-        android:layout_alignStart="@+id/title" />
+        android:layout_marginBottom="10dp"
+        android:textColor="#000" />
 
     <TextView
         android:id="@+id/skladniki"
@@ -51,21 +58,17 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:text="Składniki:"
-        android:layout_below="@+id/opis"
-        android:layout_alignRight="@+id/kroki"
-        android:layout_alignEnd="@+id/kroki"
-        android:layout_marginTop="44dp" />
-
+        android:textColor="#000"
+        android:textStyle="bold"/>
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ingredients"
-        android:text="skladniki"
-        android:layout_alignBottom="@+id/skladniki"
-        android:layout_alignLeft="@+id/title"
-        android:layout_alignStart="@+id/title" />
+        android:text="Skladniki"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000"/>
 
 
     <TextView
@@ -74,22 +77,17 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:text="Kroki:"
-        android:layout_above="@+id/porcje"
-        android:layout_alignRight="@+id/porcje"
-        android:layout_alignEnd="@+id/porcje"
-        android:layout_marginBottom="71dp" />
-
+        android:textColor="#000"
+        android:textStyle="bold"/>
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/steps"
-        android:text="kroki"
-        android:layout_toEndOf="@+id/introduction"
-        android:layout_alignBottom="@+id/kroki"
-        android:layout_alignLeft="@+id/ingredients"
-        android:layout_alignStart="@+id/ingredients" />
+        android:text="Kroki"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000"/>
 
     <TextView
         android:id="@+id/porcje"
@@ -97,11 +95,8 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:text="Porcje:"
-        android:layout_above="@+id/czasgot"
-        android:layout_alignRight="@+id/PreparationMinutes"
-        android:layout_alignEnd="@+id/PreparationMinutes"
-        android:layout_marginBottom="77dp" />
-
+        android:textColor="#000"
+        android:textStyle="bold"/>
 
 
     <TextView
@@ -109,10 +104,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/servings"
         android:text="Porcje"
-        android:layout_toEndOf="@+id/steps"
-        android:layout_alignBottom="@+id/porcje"
-        android:layout_alignLeft="@+id/steps"
-        android:layout_alignStart="@+id/steps" />
+        android:layout_marginBottom="10dp"
+        android:textColor="#000"/>
 
     <TextView
         android:id="@+id/czasgot"
@@ -120,11 +113,8 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:text="Czas gotowania:"
-        android:layout_toEndOf="@+id/ingredients"
-        android:layout_above="@+id/czasprzyg"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="83dp" />
+        android:textColor="#000"
+        android:textStyle="bold"/>
 
 
     <TextView
@@ -132,9 +122,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/CookingMinutes"
         android:text="Czas Gotowania"
-        android:layout_alignBottom="@+id/czasgot"
-        android:layout_alignLeft="@+id/servings"
-        android:layout_alignStart="@+id/servings" />
+        android:layout_marginBottom="10dp"
+        android:textColor="#000"/>
 
 
     <TextView
@@ -143,17 +132,30 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:text="Czas przygotowania:"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:textColor="#000"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/PreparationMinutes"
         android:text="Czas Przygotowywania"
-        android:layout_toEndOf="@+id/servings"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/CookingMinutes"
-        android:layout_alignStart="@+id/CookingMinutes" />
-</RelativeLayout>
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/dodano"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Dodano:"
+        android:textColor="#000"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/created"
+        android:text="Dodano"
+        android:textColor="#000"/>
+</LinearLayout>
+ </ScrollView>

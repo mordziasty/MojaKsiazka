@@ -66,4 +66,11 @@ public class logowanie extends ActionBarActivity {
     }
     @Extra
     User user;
+
+    @Click
+    void RejestracjaBtnClicked(){
+        Rejestracja_.intent(this).start();
+        finish();
+    }
+
 }

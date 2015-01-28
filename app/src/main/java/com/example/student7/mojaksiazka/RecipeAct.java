@@ -31,6 +31,9 @@ public class RecipeAct extends ActionBarActivity {
     @ViewById
     TextView PreparationMinutes;
 
+    @ViewById
+    TextView created;
+
     @Extra
     Recipe recipe;
 
@@ -43,7 +46,7 @@ public class RecipeAct extends ActionBarActivity {
         steps.setText(recipe.steps);
         if (recipe.cookingMinutes != null)CookingMinutes.setText(Integer.toString(recipe.cookingMinutes));
         if (recipe.preparationMinutes != null)PreparationMinutes.setText(Integer.toString(recipe.preparationMinutes));
-
+        created.setText(recipe.created);
     }
 
 }

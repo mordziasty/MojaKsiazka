@@ -4,6 +4,7 @@ package com.example.student7.mojaksiazka;
 import com.example.student7.mojaksiazka.data.EmailAndPassword;
 import com.example.student7.mojaksiazka.data.Recipe;
 import com.example.student7.mojaksiazka.data.RecipeList;
+import com.example.student7.mojaksiazka.data.Registration;
 import com.example.student7.mojaksiazka.data.User;
 
 
@@ -31,4 +32,8 @@ public interface RecipeRestClient extends RestClientHeaders {
 
     @Post("/user/session")
     User login(EmailAndPassword emailAndPassword);
+
+    @Post("/user/register/?login=true")
+    User register(Registration registration);
+
 }
